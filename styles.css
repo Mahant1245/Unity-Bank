@@ -18,10 +18,24 @@ nav{
     background-color: orange;
     font-weight: bold;
     padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3 ease;
+    
+    
 }
 .navLink:hover{
     background-color: rgb(235, 194, 15);
     color: rgb(76, 0, 255);
+}
+header{
+    background: linear-gradient(135deg, #1A237E,#2196F3);
+    color: transparent;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    width: 120%;
+    margin:  auto;
+
+}
+body{
+   background: linear-gradient(135deg, #0D47A1, #1E88E5, #263238);
+    padding: 20px;
 }
