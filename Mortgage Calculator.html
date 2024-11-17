@@ -9,23 +9,23 @@
     <title>Mortgage Calculator</title>
     <link rel="icon" type="image/x-icon" href="tLogo.png"><!--https://www.shutterstock.com/image-vector/pound-circle-icon-vector-template-786528616-->
 </head>
-<header>
-    <nav > 
-        <a href="Home.html"><img id = "mainLogo" src="logo.png" alt="Bank Logo" onclick=""></a>
-            <ul class ="navigation">
-                <div class="navdiv">
-                    <li><a href="Home.html" class="navLink" >Home</a></li>
-                    <li><a href="Services.html" class="navLink">Services</a></li>    
-                    <li><a href="About Us.html" class="navLink">About Us</a></li>
-                    <li><a href="Mortgage Calculator.html" class="navLink">Mortgage Calculator</a></li>
-                    <li><a href="FAQ.html" class="navLink">FAQs</a></li>
-                    <li><a href="Contact Us.html" class="navLink">Contact Us</a></li>
-                </div>
-            </ul>
-    </nav>
-</header>
-
 <body>
+    <header>
+        <nav > 
+            <a href="Home.html" class="active"><img id = "mainLogo" src="logo.png" alt="Bank Logo" ></a>
+            <button class="hamburger" id="hamburger">☰</button>
+                <ul id="tabs" class="tabs">
+                    <div class="navdiv">
+                        <li><a href="Home.html" class="navLink " >Home</a></li>
+                        <li><a href="Services.html" class="navLink ">Services</a></li>    
+                        <li><a href="About Us.html" class="navLink ">About Us</a></li>
+                        <li><a href="Mortgage Calculator.html" class="navLink active">Mortgage Calculator</a></li>
+                        <li><a href="FAQ.html" class="navLink ">FAQs</a></li>
+                        <li><a href="Contact Us.html" class="navLink ">Contact Us</a></li>
+                    </div>
+                </ul>
+        </nav>
+    </header>
     <!--events can be used in calculate buttons--see lec slides.-->
 </body>
 </html>

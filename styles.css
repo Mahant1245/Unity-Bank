@@ -11,8 +11,10 @@ nav{
 }
 .navLink{
     display: flexbox;
-    gap: 15px;
-    font-size: 20px;
+    flex-wrap: wrap;
+    gap:10px;
+    font-size: 18px;
+    
     background-color: rgb(109, 245, 5);
     color: rgb(0, 0, 0);
     font-weight: bold;
@@ -31,30 +33,71 @@ nav{
     gap: 10px;
     list-style-type: none;
     display: flex;
+    
 }
 header{
     background: linear-gradient(to right, #0c0c0c,#515354);
     color: white;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     border-radius: 10rem;
-    width: 120%;
-    padding: 10px 20px;
+    width: 100%;
+    padding: 0px 10px 0px 0px;
     position: sticky;
     top: 0;
     max-width: 100%;
-    margin: 10px;
+    display: flexbox;
+    flex-wrap: wrap;
 }
 body{
-    background: linear-gradient(to right,#373738,#868687);
-    margin: 0;
+    background: linear-gradient(to right,#3c3c3d,#757576);
+    margin: 5px;
     min-height: 100vh;
-    
-}
-#mainLogo{
-    border-radius: 7rem;
-    height: 70px;
     max-width: 100%;
 }
 
+#mainLogo{
+    border-radius: 7rem;
+    height: 60px;
+    max-width: 100%;
+}
+.navLink.active{
+    background-color: rgb(255, 61, 2);
+    border: 2px solid rgb(255, 255, 0);
+}
+.hamburger{
+    display:none; 
+    font-size:30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.hidden{
+    display: none !important;
+}
+.vertical{
+    display: flex !important;
+    flex-direction: column;/*makes the navigation in column rather than in row*/
+    flex-wrap: nowrap;
+    background: radial-gradient(circle,black,rgb(143, 143, 143));
+    position: absolute;
+    align-items: stretch;
+    top: 100%;
+    right: 0;
+    width: 250px;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 4rem;
+}
+.vertical li{
+    list-style: none;
+    width: 100%;
+}
+.vertical a{
+    display:block;
+    text-align: center;
+    padding:10px 15px;
+    box-sizing: content-box;
+}
 

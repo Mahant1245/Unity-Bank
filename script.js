@@ -1,13 +1,24 @@
-// $(document).ready(function(){
-//     $(".navLink").on("click", function (event) {
-//         event.preventDefault(); // Stops the default link behavior
-//         console.log("A nav link was clicked! This is: " + $(this).text());
-//         $(".navLink").removeClass("active");
-//         $(this).addClass("active");
-//     });
-// });
+// hamburger script
+$(document).ready(function(){
+    const tabs=$("#tabs");
+    const hamburger=$("#hamburger");
 
-function activeTab(){
-    var tabLink= document.getElementsByClassName("navLink");
-    tabLink.style.backgroundColor = "yellow";
-}
+    // checks the width of the screen
+    function chkSrcWidth(){
+        if(window.innerWidth<=1007){
+            tabs.addClass("hidden");
+            hamburger.show();
+        }
+        else{
+            tabs.removeClass("hidden vertical");
+            hamburger.hide();
+        }
+    }
+    hamburger.on("click",function(){
+        tabs.toggleClass("hidden vertical");
+    });
+
+    $(window).on("resize",chkSrcWidth);//checks each time usr change the size
+    chkSrcWidth();
+});
+//
