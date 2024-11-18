@@ -107,24 +107,18 @@ body{
 
 .hero{
     display: flex;
-    align-items:center;
-    justify-content: center;
-    text-align: center;
-    height: 90vh;
+    height:95vh;
+    width: 100%;
     background-image: url("hero.png");
     background-size: cover;
-    background-position: center;
+    background-position:center;
     color:white;
-    padding: 20px;
     position: relative;
-    overflow: hidden;
     margin: 7px;
     border-radius: 3rem;
+    
 }
-.hero img{
-    position: relative;
-    z-index: 1;
-}
+
 .hero::after{
     content:"";
     /* to make sure it doesnt float around */
@@ -140,5 +134,30 @@ body{
 .hcontent{
     position: relative;
     z-index: 2;
-    max-width: 880px;
+    max-width: 100%;
+    text-align: center;
+    padding-left: 20px;
+    padding-right:60px;
+    padding-top: 170px;
+    font-size: larger;
+}
+#hero_heading{
+    font-size:60px;
+    font-weight: bolder;
+    
+}
+#hero_para{
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #fff;
+    animation: typing 4s steps(30,end),blink 0.5s step-end infinite;
+}
+@keyframes typing{
+    from{width:0;}
+    to{width:100%}
+}
+@keyframes blink{
+    from,to{border-color: transparent;}
+    50%{border-color: white;}
 }
