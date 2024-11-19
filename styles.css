@@ -142,20 +142,26 @@ body{
     text-align: center;
     padding-left: 50px;
     padding-right:60px;
-    padding-top: 170px;
+    padding-top: 110px;
     font-size: larger;
 }
 #hero_heading{
     font-size:60px;
     font-weight: bolder;
-    
+    animation: fadeInDown 3s ease-in-out;
+}
+@keyframes fadeInDown {
+    0%{opacity: 0;transform: translateY(-20px);}
+    100%{opacity: 1;transform: translateY(0);}
 }
 #hero_para{
     font-size: 30px;
     overflow: hidden;
     white-space: nowrap;
     border-right: 4px solid #fff;
+    color: #ffd700;
     animation: typing 7s steps(30,end) infinite,blink 0.5s step-end infinite;
+
 }
 @keyframes typing{
     from{width:0;}
@@ -166,14 +172,70 @@ body{
     50%{border-color: white;}
 }
 .scrDwn{
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    z-index: 10;
+    font-size: 25px;
+    animation: fadeInUp 2s ease-in-out;
 }
-#intro{
-    padding: 50px 20px;
-    background: #fff;
-    border-radius: 3rem;
-    margin-top: 20px;
+@keyframes fadeInUp{
+    0%{opacity: 0;transform: translateY(50px);}
+    100%{opacity: 1;transform: translateY(0);}
+}
+#calcbtn{
+    border-radius: 1rem;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #ffd700;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #88ff00;
+    
+    transition: background-color 0.3s, color 0.3s;
+}
+#calcbtn a{
+    color: inherit;
+    text-decoration: none;
+}
+#calcbtn:hover{
+    background-color: #ffd700;
+    color: #000;
+}
+#calcbtn img{
+    width: 18px;
+    height: 21px;
+    margin-left: 5px;
+    vertical-align: middle;
+    animation: spin 3s linear infinite;
+    
+}
+@keyframes spin {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.service{
+    /* makes the card in the centre and divide them all in equal section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 0;
+    background: linear-gradient(to right,#3c3c3d,#757576);
+}
+.s_card{
+    background: #99999a;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.s_card:hover{
+    transform: translateY(-10px);
+    border: 2px solid #ffd700;
+}
+.s_title{
+    font-size: 24px;
+    font-weight: bold;
 }
