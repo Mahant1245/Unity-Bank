@@ -3,6 +3,9 @@
     padding:0;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
 
 nav{
     display: flex;
@@ -59,7 +62,7 @@ body{
     min-height: 100vh;
     max-width: 100%;
     margin-right: 20px;
-
+    height: 100%;
 }
 
 #mainLogo{
@@ -211,6 +214,17 @@ body{
     100%{transform: rotate(360deg);}
 }
 
+#s_Heading{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 3);
+    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInDown 3s ease-in-out;
+}
+
 .service{
     /* makes the card in the centre and divide them all in equal section */
     display: flex;
@@ -219,7 +233,8 @@ body{
     flex-wrap: wrap;
     gap: 20px;
     padding: 50px 0;
-    background: linear-gradient(to right,#3c3c3d,#757576);
+    border-radius: 3rem;
+    background: linear-gradient(to right,#272728,#5a5a5b);
 }
 .s_card{
     background: #99999a;
@@ -230,6 +245,7 @@ body{
     text-align: center;
     position: relative;
     overflow: hidden;
+    animation: fadeInUp 3s ease-in-out;
 }
 .s_card:hover{
     transform: translateY(-10px);
@@ -238,4 +254,80 @@ body{
 .s_title{
     font-size: 24px;
     font-weight: bold;
+}
+.s_content{
+    opacity: 0;/* so this will hide the contents */
+    transition: opasity 0.3s;
+}
+.s_card:hover .s_content{/*cool thing-->so when i hover the contents opacity changes */
+    opacity: 1;
+}
+.s_content a{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color:#000000;
+    border-radius: 3rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    background: linear-gradient(to right,#f86300,#fcf701);
+}
+.s_content a:hover{
+    background: linear-gradient(to right,#ca5582,#ba63ed);;
+}
+/* now for service tab */
+.main_heading{
+    font-size: 48px;
+    text-align: center;
+    margin: 30px 0;
+    color: #ffd700;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
+}
+.service_tab{
+    height: 100vh;/*esential to coverup whole thing*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #3c3c3d,#757576);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 3rem;
+    margin: 0;
+}
+
+.service_tab h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+    display: none;/*none because it has animation written in script*/
+}
+.service_tab p{
+    font-size: 18px;
+    max-width: 100%;
+    display: none;
+}
+.service_tab.visible{
+    opacity:1;
+    pointer-events: auto;
+    transition: opacity 0.5s ease;
+}
+.service_tab h2, .service_tab p{
+    display: block;
+}
+.service_tab.hidden{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity o.5s ease;
+}
+#p_banking,#b_banking,#loan,#insurance{
+    background: linear-gradient(to right,#1a3361,#5c92ef);
+}
+.service_Content{
+    padding: 20px 0;
+}
+html,body{
+    height: 100%;
 }

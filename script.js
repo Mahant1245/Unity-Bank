@@ -22,3 +22,32 @@ $(document).ready(function(){
     chkSrcWidth();
 });
 //
+$(document).ready(function(){
+    function showSection(section){
+       $('.service_tab').removeClass('visible').addClass('hidden');
+       $(section).removeClass('hidden').addClass('visible');
+    }
+    function checkSectionInView(){
+        let currentSection=null;
+
+        $('.service_tab').each(function(){
+            const top_element=$(this).offset().top;
+            const viewport_middle = $(window).scrollTop() + $(window).height() / 2;
+
+            if(top_element<=viewport_middle&&top_element+$(this).outerHeight()>viewport_middle){
+                currentSection=this;
+                return false;
+            }
+        });
+        if (currentSection){
+            showSection(currentSection);
+        }
+    }
+
+    $(window).on('scroll',function(){
+        checkSectionInView();
+    });
+
+    checkSectionInView();
+
+});
