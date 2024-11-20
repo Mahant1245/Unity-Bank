@@ -284,44 +284,35 @@ body{
     text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7);
 }
 .service_tab{
-    height: 100vh;/*esential to coverup whole thing*/
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #3c3c3d,#757576);
-    color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    color: white;    
     border-radius: 3rem;
-    margin: 0;
+    margin-bottom: 10px; 
+    padding: 20px;
 }
 
 .service_tab h2{
     font-size: 36px;
     margin-bottom: 10px;
-    display: none;/*none because it has animation written in script*/
+    
 }
 .service_tab p{
     font-size: 18px;
     max-width: 100%;
-    display: none;
 }
-.service_tab.visible{
-    opacity:1;
-    pointer-events: auto;
-    transition: opacity 0.5s ease;
-}
+
 .service_tab h2, .service_tab p{
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
 }
-.service_tab.hidden{
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity o.5s ease;
-}
+
 #p_banking,#b_banking,#loan,#insurance{
     background: linear-gradient(to right,#1a3361,#5c92ef);
 }
@@ -330,4 +321,20 @@ body{
 }
 html,body{
     height: 100%;
+}
+.service_tab img{
+    width: 50%;
+    padding: 10px;
+    border-radius: 2rem;
+}
+#p_list{
+    font-size: larger;
+    font-weight: bold;
+}
+#p_list li{
+    border: 2px solid #043995;
+    border-radius: 1rem;
+    color: #000;
+    font-size: 22px;
+    background: linear-gradient(135deg,#ff2200,#fcf701);
 }
