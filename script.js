@@ -16,6 +16,7 @@ $(document).ready(function(){
     }
     hamburger.on("click",function(){
         tabs.toggleClass("hidden vertical");
+        
     });
 
     $(window).on("resize",chkSrcWidth);//checks each time usr change the size
@@ -27,6 +28,7 @@ let sections = document.querySelectorAll('section');
 //=> is the arrow function. this replace the traditional way of writing functions. for eg here it creates the scroll function.
 window.onscroll = () =>{
     let scrollPos = window.innerHeight / 2 + window.scrollY;
+    
     sections.forEach(sec =>{
         
         let offset = sec.offsetTop;
@@ -40,3 +42,20 @@ window.onscroll = () =>{
         }
     })
 }
+
+//faq script
+$(document).ready(function(){
+    $(".faq_title").click(function(){
+        var content = $(this).next(".faq_content")
+        if(content.is(":visible")){
+            content.slideUp();
+            $(this).find(".chevron_symbol").removeClass("rotate");
+        }
+        else{
+            $(".faq_content").slideUp();
+            $(".chevron_symbol").removeClass("rotate");
+            content.slideDown();
+            $(this).find(".chevron_symbol").addClass("rotate");
+        }
+    });
+});

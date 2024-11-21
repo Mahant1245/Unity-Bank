@@ -5,13 +5,9 @@
 }
 html{
     height: 100%;
+    overflow-x: hidden;
 }
-section{
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -54,7 +50,7 @@ header{
     border-radius: 10rem;
     width: 100%;
     padding: 0px 10px 0px 0px;
-    position: relative;
+    position: sticky;
     top: 0;
     max-width: 100%;
     display: flexbox;
@@ -300,9 +296,9 @@ body{
     background: linear-gradient(to right, #3c3c3d,#757576);
     color: white;    
     border-radius: 3rem;
-    margin-bottom: 10px; 
+    margin-bottom: 20px; 
     padding: 20px;
-    
+    animation: fadeInDown 2s ease-in-out;
 }
 
 .service_tab h2{
@@ -344,18 +340,167 @@ html,body{
     justify-content: center;
     border-radius: 1rem;
     color: #000;
-    font-size: 22compx;
+    font-size: 22px;
     background: linear-gradient(135deg,#ff2200,#fcf701);
 }
 section .animate{
-    transition: 1s;
+    transition: transform 1s, opacity 1s;
+    opacity: 1;
+}
+/* scroll animation for persoal banking sec */
+/* got to know that space between two class indicates parent child relationship whereas no space means same element. */
+.pBanking .animate{ /*here we have space because animate is in every child of pbanking*/
+    transform: translateX(-105%);
+    opacity: 0;
+}
 
-}
-.pBanking .animate{
-    transform: translateX(-100%);
-    
-}
 .pBanking.show_animate .animate{
     transform: translateX(0);
-   
+    opacity: 1;
+}
+
+.pBanking{
+    transition: opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.pBanking.show_animate{ /*here we have no space because this is same elem*/
+    opacity: 1;
+    visibility: visible;
+    
+}
+/* list delay for pbanking */
+#i1,#i2,#i3,#i4{
+    opacity: 0;
+    transform: translateX(100%); /*all the way to right*/
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.pBanking.show_animate #i1{
+    transform: translateX(0);/*back to normal*/
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+.pBanking.show_animate #i2{
+    transform: translateX(0);/*back to normal*/
+    transition-delay: 0.6s;
+    opacity: 1;
+}
+.pBanking.show_animate #i3{
+    transform: translateX(0);/*back to normal*/
+    transition-delay: 0.9s;
+    opacity: 1;
+}
+.pBanking.show_animate #i4{
+    transform: translateX(0);/*back to normal*/
+    transition-delay: 1.2s;
+    opacity: 1;
+}
+/* scroll animation for business bankng */
+.bBanking .animate{
+    transform: translateX(105%);
+    opacity: 0;
+}
+
+.bBanking.show_animate .animate{
+    transform: translateX(0);
+    opacity: 1;
+}
+.bBanking{/*for background*/
+    transition: opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.bBanking.show_animate{
+    opacity: 1;
+    visibility: visible;
+}
+.bBanking .animate#b_img{
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 2s ease, opacity 0.5s ease;
+}
+.bBanking.show_animate #b_img{
+    transform: translateX(0);
+    opacity: 1;
+}
+/* scroll for insurance sec */
+.insurance .animate{
+    transform: scaleX(0);
+    opacity: 0;
+}
+
+.insurance.show_animate .animate{
+    transform: scaleX(1);
+    opacity: 1;
+}
+.insurance{/*for background*/
+    transition: opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.insurance.show_animate{
+    opacity: 1;
+    visibility: visible;
+}
+/* scroll for loans sec */
+.loan .animate{
+    transform: scaleY(0);
+    opacity: 0;
+}
+
+.loan.show_animate .animate{
+    transform: scaleY(1);
+    opacity: 1;
+}
+.loan{/*for background*/
+    transition: opacity 1s, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+.loan.show_animate{
+    opacity: 1;
+    visibility: visible;
+}
+.loan .animate#loan_img{
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 2s ease, opacity 0.5s ease;
+}
+.loan.show_animate #loan_img{
+    transform: scale(1);
+    opacity: 1;
+}
+.faq{
+    width: 80%;
+    max-width: 1300px;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.faq_title{
+    background-color: #ba63ed;
+    color: #000;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid #000;
+    transition: background-color 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/*makes chevron and title on different corners*/
+}
+.faq_title:hover{
+    background-color: #88ff00;
+}
+.faq_content{
+    background-color: #ca5582;
+    padding: 10px;
+    border-bottom: 2px solid #eeff00;
+    display: none;
+}
+.chevron_symbol{
+    transition: transform 0.3s;
+}
+.rotate{
+    transform: rotate(90deg);
 }
