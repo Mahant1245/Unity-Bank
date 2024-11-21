@@ -6,7 +6,12 @@
 html{
     height: 100%;
 }
-
+section{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -163,7 +168,7 @@ body{
     white-space: nowrap;
     border-right: 4px solid #fff;
     color: #ffd700;
-    animation: typing 7s steps(30,end) infinite,blink 0.5s step-end infinite;
+    animation: typing 4s steps(30,end) infinite,blink 0.5s step-end infinite;
 
 }
 @keyframes typing{
@@ -261,6 +266,7 @@ body{
 }
 .s_card:hover .s_content{/*cool thing-->so when i hover the contents opacity changes */
     opacity: 1;
+    animation: fadeInUp 0.8s ease-in-out;
 }
 .s_content a{
     display: inline-block;
@@ -296,6 +302,7 @@ body{
     border-radius: 3rem;
     margin-bottom: 10px; 
     padding: 20px;
+    
 }
 
 .service_tab h2{
@@ -323,7 +330,7 @@ html,body{
     height: 100%;
 }
 .service_tab img{
-    width: 50%;
+    width: 35%;
     padding: 10px;
     border-radius: 2rem;
 }
@@ -332,9 +339,23 @@ html,body{
     font-weight: bold;
 }
 #p_list li{
-    border: 2px solid #043995;
+    border: 2px solid #eeff00;
+    padding: 5px;
+    justify-content: center;
     border-radius: 1rem;
     color: #000;
     font-size: 22compx;
     background: linear-gradient(135deg,#ff2200,#fcf701);
+}
+section .animate{
+    transition: 1s;
+
+}
+.pBanking .animate{
+    transform: translateX(-100%);
+    
+}
+.pBanking.show_animate .animate{
+    transform: translateX(0);
+   
 }

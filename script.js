@@ -22,9 +22,21 @@ $(document).ready(function(){
     chkSrcWidth();
 });
 
-$(document).ready(function(){
-    // here we use .waypoint() to extract thing from cdn
-    $(".main_heading").waypoint(function(){
-         console.log("reach to top");
+//scroll script
+let sections = document.querySelectorAll('section');
+//=> is the arrow function. this replace the traditional way of writing functions. for eg here it creates the scroll function.
+window.onscroll = () =>{
+    let scrollPos = window.innerHeight / 2 + window.scrollY;
+    sections.forEach(sec =>{
+        
+        let offset = sec.offsetTop;
+        let height = sec.offsetHeight;
+
+        if(scrollPos >= offset && scrollPos < offset + height){
+            sec.classList.add('show_animate');
+        }
+        else{
+            sec.classList.remove('show_animate');
+        }
     })
-});
+}
