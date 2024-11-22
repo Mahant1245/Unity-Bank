@@ -470,16 +470,28 @@ section .animate{
     transform: scale(1);
     opacity: 1;
 }
+#faq_main_heading{
+    font-family:cursive,sans-serif,Arial;
+    text-align: center;
+    margin: 20px;
+    font-weight: bolder;
+    color: #01ffe6;
+    text-decoration-line: underline;
+    text-decoration: wavy; 
+}
 .faq{
     width: 80%;
     max-width: 1300px;
     margin: 20px auto;
-    border: 2px solid #ddd;
+    border: 2px solid #000;
     border-radius: 8px;
     overflow: hidden;
+    background: linear-gradient(175deg, #f86300,#fcf701);
+    animation: fadeInUp 2s ease-in-out;
 }
 .faq_title{
     background-color: #ba63ed;
+    font-size:19px;
     color: #000;
     padding: 10px;
     cursor: pointer;
@@ -493,9 +505,11 @@ section .animate{
     background-color: #88ff00;
 }
 .faq_content{
-    background-color: #ca5582;
+    background-color: #0f02fe;
+    color: white;
     padding: 10px;
-    border-bottom: 2px solid #eeff00;
+    border: 10px #070707;
+    border-style: none none none solid;
     display: none;
 }
 .chevron_symbol{
@@ -504,3 +518,4 @@ section .animate{
 .rotate{
     transform: rotate(90deg);
 }
+
