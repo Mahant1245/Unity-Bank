@@ -26,7 +26,25 @@
                 </ul>
         </nav>
     </header>
-    
+    <!-- **got the form from lab work** -->
+    <form id="myForm">
+        <h1>4 Form Validation</h1>
+        <label for="userAge1">Enter your age:</label>
+        <input type="text" id="userAge1" name="age" required><br><!--here "age" act as a key when data is sent to the server-->
+        
+        <label for="name1">Enter your name:</label>
+        <input type="text" id="name1" name="userName" required><br>
+        
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email1" name="userEmail" required><br>
+        
+        <label for="postcode1">Enter your postcode:</label>
+        <input type="" id="postcode1" name="userPostcode" required><br><br>
+        <span id ="error"></span><br>
+        
+        <button onclick="help()">Help</button>
+        <button id="submitBtn" type="submit" onclick="err()">Submit</button>
+    </form>
 </body>
 <footer style="color: white;font-size: 16px; text-align: center; font-weight: bold;">&#169 2024 Unity Bank by Mahant Lacximikant</footer>
 </html>

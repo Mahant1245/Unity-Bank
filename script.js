@@ -59,3 +59,40 @@ $(document).ready(function(){
         }
     });
 });
+
+//form validation
+function err(){
+    var error=document.getElementById("error")
+    if(isNaN(document.getElementById("userAge1").value)){
+        error.textContent = "please enter the valid number";
+        error.style.color="red";
+        document.getElementById("userAge1").style.borderColor ="red";
+        return true;
+        // //this code below will stop sending the form
+        // const form = document.getElementById('myForm');
+        // form.addEventListener('submit', function(event) {
+        // event.preventDefault();
+        // });
+
+    }
+    else if(parseInt(document.getElementById("userAge1").value)<18){
+        error.textContent = "You are too young";
+        error.style.color="red";
+        
+        document.getElementById("userAge1").style.borderColor ="red";
+        return true;
+
+        // //this code below will stop sending the form
+        // const form = document.getElementById('myForm');
+        // form.addEventListener('submit', function(event) {
+        // event.preventDefault();
+        // var field= document.getElementById('userAge1');
+        // field.value= field.defaultValue;
+        // });
+    }
+}
+function chk(){
+    if(err()){
+
+    }
+}
