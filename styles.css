@@ -169,7 +169,7 @@ body{
 }
 @keyframes typing{
     from{width:0;}
-    to{width:100%}/*type till 100% text is covered*/
+    to{width:109%}/*type till 100% text is covered*/
 }
 @keyframes blink{
     from,to{border-color: transparent;}/*this makes that thing blink with curser*/
@@ -242,6 +242,7 @@ body{
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     width: 300px;
+    height: 165px;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -519,4 +520,86 @@ section .animate{
     transform: rotate(90deg);
 }
 
-/* Style for about us page */
+/* Style for contact us page */
+.contactUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 3rem;
+    background-color: #468a83;
+    margin: 50px;
+    border: 2px solid #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    /* animation: fadeInDown 3s ease-in-out; */
+}
+.contactUs h1{
+    font-size: 56px;
+    color: #fffb00;
+}
+
+.c_form{
+    display: flex;
+    justify-content: center;
+    width: 320px;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #b8b067;
+    border-radius: 5px;
+}
+#bank_form{
+    background-color: #45a1fd;
+    padding: 20px;
+    border-radius: 2rem;
+    width: 300px;
+}
+@keyframes bounce {
+    0%,100%{transform: translateY(0)}
+    50%{transform: translateY(-10px)}
+}
+.emoji{
+    display: inline-block;
+    animation: bounce 1s linear infinite;
+}
+.c_form label{
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+.c_form input,.c_form textarea{
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
+.c_banner div{
+    font-size: 24px;
+}
+#c_background{
+    padding: 24px;
+    background-color: #b8b067;
+    border-radius: 5px;
+    width: 320px;
+    height: 526.67px;
+    /* text-align: justify; */
+    font-size: 24px;
+}
+.c_btn{
+    text-align: center;
+}
+.c_btn button{
+    padding: 5px 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    background-color: #00ffd5;
+    cursor: pointer;
+    font-weight: bold;
+}
+.c_btn button:hover{
+    background-color: #0056b3;
+    color: wheat;
+}
+

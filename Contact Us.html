@@ -27,24 +27,60 @@
         </nav>
     </header>
     <!-- **got the form from lab work** -->
-    <form id="myForm">
-        <h1>4 Form Validation</h1>
-        <label for="userAge1">Enter your age:</label>
-        <input type="text" id="userAge1" name="age" required><br><!--here "age" act as a key when data is sent to the server-->
+    <section class="contactUs">
+        <h1>Contact Us</h1>
+        <p style="font-size: 20px; text-align: justify; padding: 0px 70px 0px 70px; text-align: center;"> 
+            This is the fully responsive contact us page please feel free to send us the message but message should be at least 5 characters long otherwise it will show error message!
+        </p>
+        <!-- <div class="c_container">used to have equal height -->
+            <div class="c_form">
+                <form id="bank_form">
+            
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" placeholder="eg. John" required><br>
+                    
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" placeholder="eg. Smith" required><br>
+                    
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="eg. john12@gmail.com" required><br>
+    
+                    <label for="subject">Subject*</label>
+                    <input type="text" id="subject" placeholder="Enter your subject" required><br>
+                    
+                    <label for="message">Message*</label>
+                    <textarea id="message" placeholder="Enter your message here" required></textarea><br>
+                    <span id ="result"></span><br>
+                    <div class="c_btn">
+                        <button >Reset</button>
+                        <button onclick="help()">Help</button>
+                        <button id="submitBtn" type="submit" onclick="err()">Submit</button>
+                    </div>
+                    
+                </form>
+            </div>
+            
+                <div id="c_background">
+                    <div>
+                        <h2>Address<span class="emoji">&#x1F4CD;</span></h2>
+                        <p>Unity Bank,<br> 18 Your Street,<br>LE1 1RJ,<br>Leicester,UK</p><br>
+                    </div>
+                    <div>
+                        <h2>Phone No. <span class="emoji">&#x260E;</span></h2>
+                        <a href="">+44 1234567890</a><br><br>
+                    </div>
+                    <div>
+                        <h2>Email <span class="emoji">&#x1F4E7;</span></h2>
+                        <a href="">unitybank@gmail.com</a><br><br>
+                    </div>
+                </div>
+                
         
-        <label for="name1">Enter your name:</label>
-        <input type="text" id="name1" name="userName" required><br>
+        <!-- </div> -->
+
         
-        <label for="email">Enter your email:</label>
-        <input type="email" id="email1" name="userEmail" required><br>
-        
-        <label for="postcode1">Enter your postcode:</label>
-        <input type="" id="postcode1" name="userPostcode" required><br><br>
-        <span id ="error"></span><br>
-        
-        <button onclick="help()">Help</button>
-        <button id="submitBtn" type="submit" onclick="err()">Submit</button>
-    </form>
+    </section>
+    
 </body>
 <footer style="color: white;font-size: 16px; text-align: center; font-weight: bold;">&#169 2024 Unity Bank by Mahant Lacximikant</footer>
 </html>

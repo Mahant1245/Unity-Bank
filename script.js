@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     // checks the width of the screen
     function chkSrcWidth(){
-        if(window.innerWidth<=1007){
+        if(window.innerWidth<=1022){
             tabs.addClass("hidden");
             hamburger.show();
         }
@@ -61,38 +61,29 @@ $(document).ready(function(){
 });
 
 //form validation
-function err(){
-    var error=document.getElementById("error")
-    if(isNaN(document.getElementById("userAge1").value)){
-        error.textContent = "please enter the valid number";
-        error.style.color="red";
-        document.getElementById("userAge1").style.borderColor ="red";
-        return true;
-        // //this code below will stop sending the form
-        // const form = document.getElementById('myForm');
-        // form.addEventListener('submit', function(event) {
-        // event.preventDefault();
-        // });
+$(document).ready(function(){
+    $('#bank_form').on('submit',function(event){
 
-    }
-    else if(parseInt(document.getElementById("userAge1").value)<18){
-        error.textContent = "You are too young";
-        error.style.color="red";
-        
-        document.getElementById("userAge1").style.borderColor ="red";
-        return true;
+        event.preventDefault();
 
-        // //this code below will stop sending the form
-        // const form = document.getElementById('myForm');
-        // form.addEventListener('submit', function(event) {
-        // event.preventDefault();
-        // var field= document.getElementById('userAge1');
-        // field.value= field.defaultValue;
-        // });
-    }
-}
-function chk(){
-    if(err()){
+        const msg=$('#message').val().trim();
+        const result=$('#result');
+        const messagebox=$('#message');
 
-    }
-}
+        if(msg.length<5){
+            result.text('Error:- Message should be atleast 5 character long');
+            result.css('color','red');
+            messagebox.css('border','2px solid red');
+        }
+        else{
+            result.text('Message submitted');
+            messagebox.css('border','2px solid green');
+            result.css('color','green')
+            $('#bank_form')[0].reset();//selecttor selects the form and reset the whole thing.found on google
+            setTimeout(function(){
+                result.text('');
+                messagebox.css('border','none');
+            },3000)//3sec
+        }
+    });
+});
