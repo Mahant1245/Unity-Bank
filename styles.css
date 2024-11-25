@@ -506,12 +506,17 @@ section .animate{
     background-color: #88ff00;
 }
 .faq_content{
+    background: linear-gradient(to right, #1e0175,#3b94f2);
     background-color: #0f02fe;
     color: white;
     padding: 10px;
-    border: 10px #070707;
+    border: 10px #ffffff;
     border-style: none none none solid;
     display: none;
+}
+@keyframes swing {
+    0%,100%{transform: translateX(0)}
+    50%{transform: translateX(-10px)}
 }
 .chevron_symbol{
     transition: transform 0.3s;
@@ -538,6 +543,7 @@ section .animate{
 .contactUs h1{
     font-size: 56px;
     color: #fffb00;
+    animation: bounce 1s linear infinite;
 }
 
 .c_form{
@@ -550,7 +556,7 @@ section .animate{
     border-radius: 5px;
 }
 #bank_form{
-    background-color: #45a1fd;
+    background-color: #e1bbe3;
     padding: 20px;
     border-radius: 2rem;
     width: 300px;
@@ -572,7 +578,7 @@ section .animate{
     width: 100%;
     padding: 4px;
     margin-bottom: 10px;
-    border: 2px solid #000;
+    border: 2px solid #000000;
     border-radius: 8px;
 }
 .c_banner div{
@@ -615,10 +621,11 @@ section .animate{
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px 0;
+    padding: 20px ;
     border-radius: 3rem;
     background-color: #99cac5;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    width: auto;
 }
 .year{
     font-size: 20px;
@@ -636,6 +643,7 @@ section .animate{
     cursor: pointer;
     /* animation: fadeInUp 3s ease-in-out; */
 }
+
 .year:hover{
     transform: translateY(-10px);
     border: 5px solid #ffd700;
@@ -644,10 +652,15 @@ section .animate{
     padding: 10px;
     margin: 10px;
     background-color: #0056b3;
-    border-radius: 2rem;
-    /* display: none; */
+    border-radius: 1rem;
 }
-
+#content_2008,#content_2016,#content_2024,#content_fp{
+    display: none;
+}
+#y_2000{/*making 2000 default*/
+    transform: translateY(-10px);
+    border: 5px solid #ffd700;
+}
 /* style for mortgage calculator */
 .mortgage_heading img{
     width: 18px;

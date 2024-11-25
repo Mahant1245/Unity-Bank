@@ -24,7 +24,7 @@ $(document).ready(function(){
     chkSrcWidth();
 });
 
-//scroll script
+//scroll script used for service
 let sections = document.querySelectorAll('section');
 //=> is the arrow function. this replace the traditional way of writing functions. for eg here it creates the scroll function.
 window.onscroll = () =>{
@@ -44,7 +44,7 @@ window.onscroll = () =>{
     })
 }
 
-//faq script
+//faq script used for accordion style
 $(document).ready(function(){
     $(".faq_title").click(function(){
         var content = $(this).next(".faq_content")
@@ -61,7 +61,7 @@ $(document).ready(function(){
     });
 });
 
-//form validation
+//form validation for contact us page
 $(document).ready(function(){
 
     //script for help
@@ -86,12 +86,12 @@ $(document).ready(function(){
         if(msg.length<5){
             result.text('Error:- Message should be atleast 5 character long');
             result.css('color','red');
-            messagebox.css('border','2px solid red');
+            messagebox.css('border','4px solid red');
         }
         else{
             result.text('Message submitted');
-            messagebox.css('border','2px solid green');
-            result.css('color','green')
+            messagebox.css('border','4px solid #00e431');
+            result.css('background-color','#00e431')
             $('#bank_form')[0].reset();//selecttor selects the form and reset the whole thing.found on geeksforgeeks
             setTimeout(function(){
                 result.text('');
@@ -101,29 +101,77 @@ $(document).ready(function(){
     });
 });
 
-//about us section
-// $(document).ready(function(){
-//     $(".year").hover(function(){
-//         var current_content=$(this).find(".year_content")
+// about us section
+$(document).ready(function(){
 
-//         //this var gets the h and w of ew content
-//         current_content.css('display','inline-block');
-//         var new_height=$(this).find(".year_content").outerHeight();
-//         var new_width=$(this).find(".year_content").outerWidth();
+    //2008
+    $("#y_2008").hover(function(){
+        //hide everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(0px)")
+        $("#y_2000").css("border","none")
+        $("#content_2000").hide();
 
-//         $(this).find(".year_content").animate({
-//             left: '250px',
-//             height: new_height,
-//             width:new_width
-//         }); 
-//     });
-// });
+        $("#content_2008").show();
+    },function(){
+        $("#content_2008").hide();
 
-// function(){//reset to normal
-//     $(this).animate({
-//         left: '0px',
-//         height: '100px',
-//         width:'158px'
-//     }); 
-//     $(this).find(".year_content").css('display','none');
-// }
+        //show again everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(-10px)")
+        $("#y_2000").css("border","5px solid #ffd700")
+        $("#content_2000").show();
+    });
+
+    //2016
+    $("#y_2016").hover(function(){
+        //hide everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(0px)")
+        $("#y_2000").css("border","none")
+        $("#content_2000").hide();
+
+        $("#content_2016").show();
+    },function(){
+        $("#content_2016").hide();
+        
+        //show again everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(-10px)")
+        $("#y_2000").css("border","5px solid #ffd700")
+        $("#content_2000").show();
+    });
+
+    //2024
+    $("#y_2024").hover(function(){
+        //hide everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(0px)")
+        $("#y_2000").css("border","none")
+        $("#content_2000").hide();
+
+        $("#content_2024").show();
+    },function(){
+        $("#content_2024").hide();
+        
+        //show again everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(-10px)")
+        $("#y_2000").css("border","5px solid #ffd700")
+        $("#content_2000").show();
+    });
+
+    //future plans
+    $("#y_fp").hover(function(){
+        //hide everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(0px)")
+        $("#y_2000").css("border","none")
+        $("#content_2000").hide();
+
+        $("#content_fp").show();
+    },function(){
+        $("#content_fp").hide();
+        
+        //show again everything for 2000(default thing)
+        $("#y_2000").css("transform","translateY(-10px)")
+        $("#y_2000").css("border","5px solid #ffd700")
+        $("#content_2000").show();
+    });
+
+    
+});
+
