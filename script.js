@@ -102,22 +102,22 @@ $(document).ready(function(){
 });
 
 //about us section
-$(document).ready(function(){
-    $(".year").hover(function(){
-        var current_content=$(this).find(".year_content")
+// $(document).ready(function(){
+//     $(".year").hover(function(){
+//         var current_content=$(this).find(".year_content")
 
-        //this var gets the h and w of ew content
-        current_content.css('display','inline-block');
-        var new_height=$(this).find(".year_content").outerHeight();
-        var new_width=$(this).find(".year_content").outerWidth();
+//         //this var gets the h and w of ew content
+//         current_content.css('display','inline-block');
+//         var new_height=$(this).find(".year_content").outerHeight();
+//         var new_width=$(this).find(".year_content").outerWidth();
 
-        $(this).find(".year_content").animate({
-            left: '250px',
-            height: new_height,
-            width:new_width
-        }); 
-    });
-});
+//         $(this).find(".year_content").animate({
+//             left: '250px',
+//             height: new_height,
+//             width:new_width
+//         }); 
+//     });
+// });
 
 // function(){//reset to normal
 //     $(this).animate({

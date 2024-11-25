@@ -533,7 +533,7 @@ section .animate{
     margin: 50px;
     border: 2px solid #000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-    /* animation: fadeInDown 3s ease-in-out; */
+    animation: fadeInDown 3s ease-in-out;
 }
 .contactUs h1{
     font-size: 56px;
@@ -608,8 +608,9 @@ section .animate{
     display: inline-block;
     animation: spin 3s linear infinite;
 }
-.a_container{
+.a_container,.year_container{
     display: flex;
+    margin: 20px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -617,30 +618,34 @@ section .animate{
     padding: 20px 0;
     border-radius: 3rem;
     background-color: #99cac5;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
 }
 .year{
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bolder;
     background: #99999a;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    width: 158px;
-    height: 100px;
+    width: 140px;
+    height: 40px;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
     /* animation: fadeInUp 3s ease-in-out; */
 }
 .year:hover{
     transform: translateY(-10px);
     border: 5px solid #ffd700;
-    height: auto;
-    width: auto;
 }
 .year_content{
-    display: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: #0056b3;
+    border-radius: 2rem;
+    /* display: none; */
 }
 
 /* style for mortgage calculator */
