@@ -26,21 +26,27 @@
                 </ul>
         </nav>
     </header>
-    <h1 class="mortgage_heading">Mortgage Calculator <img src="calc.png" alt=""></h1>
+    <section class="mortgageCalc">
+        <h1 class="mortgage_heading"><img src="calc.png" alt="calc img"> Mortgage Calculator <img src="calc.png" alt="calc img"></h1>
 
+        <form id="calc_form">
+            <label>Loan Amount</label><br>
+            <input id="loan_amount" class="calc_input" placeholder="eg. 100000" required><br>
 
-        <label>Loan Amount</label>
-        <input id="loan_amount"></input>
+            <label>Loan Term (in years)</label><br>
+            <input id="loan_term" class="calc_input" placeholder="eg. 25" required><br>
 
-        <label>Loan Term (in years)</label>
-        <input id="loan_term"></input>
+            <label>Monthly Income</label><br>
+            <input id="monthly_income" class="calc_input" placeholder="eg. 3000" required><br>
 
-        <label>Monthly Income</label>
-        <input id="monthly_income"></input>
-
-        <button type="button" id="m_calculate">Calculate</button>
-
-        <p id="result_content"></p>
+            <button type="reset" id="calc_reset">Reset</button>
+            <button type="submit" id="m_calculate">Calculate</button>
+            <p style="padding: 10px; border-radius: 15px;" id="result_content"></p>
+        </form>
+    </section>
+    
+    
+    
 
 
 </body>

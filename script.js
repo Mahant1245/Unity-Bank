@@ -80,6 +80,8 @@ $(document).ready(function(){
         event.preventDefault();
 
         const msg=$('#message').val().trim();
+        const subject =$('#subject').val().trim();
+        const subject_box=$('#subject');
         const result=$('#result');
         const messagebox=$('#message');
 
@@ -87,15 +89,28 @@ $(document).ready(function(){
             result.text('Error:- Message should be atleast 5 character long');
             result.css('color','red');
             messagebox.css('border','4px solid red');
+            subject_box.css('border','2px solid #000000');
+            subject_box.css('border-radius', '8px');
+        }
+        else if(subject.length<5){
+            result.text('Error:- Subject should be atleast 5 character long');
+            result.css('color','red');
+            subject_box.css('border','4px solid red');
+            messagebox.css('border','2px solid #000000');
+            messagebox.css('border-radius', '8px');
         }
         else{
             result.text('Message submitted');
             messagebox.css('border','4px solid #00e431');
+            subject_box.css('border','4px solid #00e431');
             result.css('background-color','#00e431')
             $('#bank_form')[0].reset();//selecttor selects the form and reset the whole thing.found on geeksforgeeks
             setTimeout(function(){
                 result.text('');
-                messagebox.css('border','none');
+                messagebox.css('border','2px solid #000000');
+                messagebox.css('border-radius', '8px');
+                subject_box.css('border','2px solid #000000');
+                subject_box.css('border-radius', '8px');
             },3000)//3sec
         }
     });
@@ -176,30 +191,60 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    
+    //reset calc
+    $('#calc_reset').click(function(event){
+        $('#calc_form')[0].reset();
+    })
 
-    $('#m_calculate').click(function(){
+    $('#m_calculate').click(function(event){
+        event.preventDefault();
+
         var p= parseFloat($('#loan_amount').val());
-        
         const r= parseFloat(0.045/12);
-        
         var n= parseFloat($('#loan_term').val())*12;
-        
         var income = parseFloat($('#monthly_income').val());
-        
         var monthy_repayment = (p*r*(1 + r)**n)/((1 + r)**n-1);
-        console.log(monthy_repayment)
         var threshold=0.3*income;
         var income_left=income-monthy_repayment;
         var total_payment=monthy_repayment
 
-
-        if(monthy_repayment>threshold){
-            $("#result_content").text("loan denied")
+        if(isNaN(p)){
+            $(".calc_input").css('border', '2px solid #000000');
+            $(".calc_input").css('border-radius', '8px');
+            $('#loan_amount').css('border','4px solid red');
+            $("#result_content").text("Invalid Input!!Loan amount must be a number ");
+            $("#result_content").css('color','red');
+        }
+        else if(isNaN(n)){
+            $(".calc_input").css('border', '2px solid #000000');
+            $(".calc_input").css('border-radius', '8px');
+            $('#loan_term').css('border','4px solid red');
+            $("#result_content").text("Invalid Input!!Loan term must be a number ");
+            $("#result_content").css('color','red');
+        }
+        else if(isNaN(income)){
+            $(".calc_input").css('border', '2px solid #000000');
+            $(".calc_input").css('border-radius', '8px');
+            $('#monthly_income').css('border','4px solid red');
+            $("#result_content").text("Invalid Input!!Monthly income must be a number ");
+            $("#result_content").css('color','red');
         }
         else{
-            $("#result_content").text("loan approved monthly"+ monthy_repayment.toFixed(2) +".")
+            $(".calc_input").css('border', '2px solid #000000');
+            $(".calc_input").css('border-radius', '8px');
+            $("#result_content").css('color','black');
+            if(monthy_repayment>threshold){
+                $("#result_content").text("loan denied");
+                $('#calc_form')[0].reset();
+                $("#result_content").css('background-color','#ff0e0e');
+            }
+            else{
+                $('#calc_form')[0].reset();
+                $("#result_content").text("loan approved monthly"+ monthy_repayment.toFixed(2) +".");
+                $("#result_content").css('background-color','#00e431')
+            }
         }
+        
     });
 });
 
