@@ -190,6 +190,7 @@ $(document).ready(function(){
     
 });
 
+//mortgage calculator
 $(document).ready(function(){
     //reset calc
     $('#calc_reset').click(function(event){
@@ -231,6 +232,10 @@ $(document).ready(function(){
             $("#result_content").text("Invalid Input!!Monthly income must be a number ");
             $("#result_content").css('color','red');
         }
+        else if(p==0 || n==0||income==0){
+            $("#result_content").text("Invalid Input!! Cannot have 0 as input ");
+            $("#result_content").css('color','red');
+        }
         else{
             $(".calc_input").css('border', '2px solid #000000');
             $(".calc_input").css('border-radius', '8px');
@@ -244,7 +249,7 @@ $(document).ready(function(){
             else{
                 // $('#calc_form')[0].reset();
                 $("#result_content").html("Loan approved <br>Monthly Payment = "+ monthy_repayment.toFixed(2)+"<br>Total Payment = " +total_payment.toFixed(2)+"<br>Total interest = "+total_interest.toFixed(2)+"<br>Income Left = "+income_left.toFixed(2));
-                $("#result_content").css('background-color','#00e431')
+                $("#result_content").css('color','#00e431')
             }
         }
         

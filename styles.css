@@ -702,7 +702,7 @@ section .animate{
     animation: fadeInDown 3s ease-in-out;
 }
 #calc_form{
-    background-color: #eee64a;
+    background-color: #6b6246;
     border: 2px solid #000;
     border-radius: 4rem;
     padding: 20px;
@@ -717,6 +717,7 @@ section .animate{
 }
 #loan_amount,#monthly_income,#loan_term{
     margin-bottom: 20px;
+    background-color: wheat;
     width: 60%;
     height: 40px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
