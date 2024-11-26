@@ -175,3 +175,31 @@ $(document).ready(function(){
     
 });
 
+$(document).ready(function(){
+    
+
+    $('#m_calculate').click(function(){
+        var p= parseFloat($('#loan_amount').val());
+        
+        const r= parseFloat(0.045/12);
+        
+        var n= parseFloat($('#loan_term').val())*12;
+        
+        var income = parseFloat($('#monthly_income').val());
+        
+        var monthy_repayment = (p*r*(1 + r)**n)/((1 + r)**n-1);
+        console.log(monthy_repayment)
+        var threshold=0.3*income;
+        var income_left=income-monthy_repayment;
+        var total_payment=monthy_repayment
+
+
+        if(monthy_repayment>threshold){
+            $("#result_content").text("loan denied")
+        }
+        else{
+            $("#result_content").text("loan approved monthly"+ monthy_repayment.toFixed(2) +".")
+        }
+    });
+});
+
