@@ -318,7 +318,7 @@ body{
 }
 
 #p_banking,#b_banking,#loan,#insurance{
-    background: linear-gradient(to right,#1a3361,#5c92ef);
+    background: linear-gradient(175deg,#2a0871,#3ea4e3);
 }
 .service_Content{
     padding: 20px 0;
@@ -633,14 +633,14 @@ section .animate{
     background: #99999a;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    width: 140px;
-    height: 40px;
+    width: 170px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
-    /* animation: fadeInUp 3s ease-in-out; */
+    animation: fadeInUp 3s ease-in-out;
 }
 
 .year:hover{
@@ -652,6 +652,9 @@ section .animate{
     margin: 10px;
     background-color: #0056b3;
     border-radius: 1rem;
+    animation: fadeInDown 3s ease-in-out;
+
+    
 }
 #content_2008,#content_2016,#content_2024,#content_fp{
     display: none;
