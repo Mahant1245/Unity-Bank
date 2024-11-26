@@ -194,6 +194,7 @@ $(document).ready(function(){
     //reset calc
     $('#calc_reset').click(function(event){
         $('#calc_form')[0].reset();
+        $()
     })
 
     $('#m_calculate').click(function(event){
@@ -203,10 +204,11 @@ $(document).ready(function(){
         const r= parseFloat(0.045/12);
         var n= parseFloat($('#loan_term').val())*12;
         var income = parseFloat($('#monthly_income').val());
-        var monthy_repayment = (p*r*(1 + r)**n)/((1 + r)**n-1);
+        var monthy_repayment = (p*r*(1 + r)**n)/(((1 + r)**n) -1);
         var threshold=0.3*income;
         var income_left=income-monthy_repayment;
-        var total_payment=monthy_repayment
+        var total_payment=monthy_repayment*n;
+        var total_interest=total_payment-p;
 
         if(isNaN(p)){
             $(".calc_input").css('border', '2px solid #000000');
@@ -234,14 +236,14 @@ $(document).ready(function(){
             $(".calc_input").css('border-radius', '8px');
             $("#result_content").css('color','black');
             if(monthy_repayment>threshold){
-                $("#result_content").text("Loan Denied");
-                $('#calc_form')[0].reset();
+                $("#result_content").text("Loan Denied: Monthly income exceeds 30% of your income");
+                // $('#calc_form')[0].reset();
                 $("#result_content").css('background-color','#ff0e0e');
 
             }
             else{
-                $('#calc_form')[0].reset();
-                $("#result_content").html("Loan approved monthly<br>"+ monthy_repayment.toFixed(2));
+                // $('#calc_form')[0].reset();
+                $("#result_content").html("Loan approved <br>Monthly Payment = "+ monthy_repayment.toFixed(2)+"<br>Total Payment = " +total_payment.toFixed(2)+"<br>Total interest = "+total_interest.toFixed(2)+"<br>Income Left = "+income_left.toFixed(2));
                 $("#result_content").css('background-color','#00e431')
             }
         }
