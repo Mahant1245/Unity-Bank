@@ -234,13 +234,14 @@ $(document).ready(function(){
             $(".calc_input").css('border-radius', '8px');
             $("#result_content").css('color','black');
             if(monthy_repayment>threshold){
-                $("#result_content").text("loan denied");
+                $("#result_content").text("Loan Denied");
                 $('#calc_form')[0].reset();
                 $("#result_content").css('background-color','#ff0e0e');
+
             }
             else{
                 $('#calc_form')[0].reset();
-                $("#result_content").text("loan approved monthly"+ monthy_repayment.toFixed(2) +".");
+                $("#result_content").html("Loan approved monthly<br>"+ monthy_repayment.toFixed(2));
                 $("#result_content").css('background-color','#00e431')
             }
         }

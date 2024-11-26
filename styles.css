@@ -661,6 +661,8 @@ section .animate{
     transform: translateY(-10px);
     border: 5px solid #ffd700;
 }
+
+
 /* style for mortgage calculator */
 .mortgage_heading img{
     width: 25px;
@@ -672,6 +674,8 @@ section .animate{
 .mortgage_heading{
     font-weight: bolder;
     font-size: 40px;
+    padding: 10px;
+    padding-bottom: 10px;
 }
 .calc_input{
     padding: 4px;
@@ -680,16 +684,33 @@ section .animate{
     border-radius: 8px;
 }
 .mortgageCalc{
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding: 10px;
+    position: relative;
+    padding: 20px;
     border-radius: 3rem;
     background-color: #468a83;
-    margin: 50px;
+    /* margin: 60px; */
     border: 2px solid #000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
     /* animation: fadeInDown 3s ease-in-out; */
+}
+#calc_form{
+    background-color: #eee64a;
+    border: 2px solid #000;
+    border-radius: 4rem;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    font-size:20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+#loan_amount,#monthly_income,#loan_term{
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
 }

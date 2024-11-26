@@ -27,9 +27,9 @@
         </nav>
     </header>
     <section class="mortgageCalc">
-        <h1 class="mortgage_heading"><img src="calc.png" alt="calc img"> Mortgage Calculator <img src="calc.png" alt="calc img"></h1>
-
-        <form id="calc_form">
+        <h1 class="mortgage_heading">Mortgage Calculator<img src="calc.png" alt="calc img"></h1>
+        <p id="m_intro" style="font-size: 18px; padding-bottom: 20px;">This is the fully responsive contact us page please feel free to <strong>explore it with invalid input for each section see it working!Thanks</strong></p>
+        <form id="calc_form" >
             <label>Loan Amount</label><br>
             <input id="loan_amount" class="calc_input" placeholder="eg. 100000" required><br>
 
@@ -39,9 +39,11 @@
             <label>Monthly Income</label><br>
             <input id="monthly_income" class="calc_input" placeholder="eg. 3000" required><br>
 
-            <button type="reset" id="calc_reset">Reset</button>
-            <button type="submit" id="m_calculate">Calculate</button>
-            <p style="padding: 10px; border-radius: 15px;" id="result_content"></p>
+            <div class="c_btn">
+                <button type="reset" id="calc_reset">Reset</button>
+                <button type="submit" id="m_calculate">Calculate</button>
+            </div>
+            <p style="padding: 10px; border-radius: 15px; margin: 10px;" id="result_content"></p>
         </form>
     </section>
     
