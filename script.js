@@ -25,24 +25,23 @@ $(document).ready(function(){
 });
 
 //scroll script used for service
-let sections = document.querySelectorAll('section');
-//=> is the arrow function. this replace the traditional way of writing functions. for eg here it creates the scroll function.
-window.onscroll = () =>{
+$(window).on('scroll',function(){
+    
     let scrollPos = window.innerHeight / 2 + window.scrollY;
     
-    sections.forEach(sec =>{
-        
-        let offset = sec.offsetTop;
-        let height = sec.offsetHeight;
+    $('section').each(function(){
+        let offset = $(this).offset().top;
+        let height = $(this).outerHeight();
 
         if(scrollPos >= offset && scrollPos < offset + height){
-            sec.classList.add('show_animate');
+            $(this).addClass('show_animate');
         }
         else{
-            sec.classList.remove('show_animate');
+            $(this).removeClass('show_animate');
         }
-    })
-}
+    });
+});
+
 
 //faq script used for accordion style
 $(document).ready(function(){
