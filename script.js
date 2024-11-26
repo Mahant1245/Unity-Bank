@@ -1,4 +1,4 @@
-// hamburger script
+// hamburger script for navbar
 $(document).ready(function(){
 
     const tabs=$("#tabs");
@@ -24,7 +24,7 @@ $(document).ready(function(){
     chkSrcWidth();
 });
 
-//scroll script used for service
+//scroll script used for service using jquery
 $(window).on('scroll',function(){
     
     let scrollPos = window.innerHeight / 2 + window.scrollY;

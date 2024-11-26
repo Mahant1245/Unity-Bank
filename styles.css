@@ -8,6 +8,7 @@ html{
     overflow-x: hidden;
 }
 
+/* navigation css */
 nav{
     display: flex;
     justify-content: space-between;
@@ -111,7 +112,7 @@ body{
     padding:10px 15px;
     box-sizing: content-box;
 }
-
+/* hero section css */
 .hero{
     display: flex;
     height:90vh;
@@ -349,7 +350,7 @@ section .animate{
     opacity: 1;
 }
 /* scroll animation for persoal banking sec */
-/* got to know that space between two class indicates parent child relationship whereas no space means same element. */
+/* space between two class indicates parent child relationship whereas no space means same element. */
 .pBanking .animate{ /*here we have space because animate is in every child of pbanking*/
     transform: translateX(-105%);
     opacity: 0;
