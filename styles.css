@@ -621,7 +621,7 @@ section .animate{
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding: 20px ;
+    padding: 15px ;
     border-radius: 3rem;
     background-color: #99cac5;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
@@ -635,7 +635,6 @@ section .animate{
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     width: 140px;
     height: 40px;
-    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -645,7 +644,7 @@ section .animate{
 }
 
 .year:hover{
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border: 5px solid #ffd700;
 }
 .year_content{
@@ -661,12 +660,17 @@ section .animate{
     transform: translateY(-10px);
     border: 5px solid #ffd700;
 }
-
+.about_image{
+    width: 350px;
+    height: 200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9);
+    border-radius: 1rem;
+}
 
 /* style for mortgage calculator */
 .mortgage_heading img{
-    width: 25px;
-    height: 30px;
+    width: 30px;
+    height: 40px;
     margin-left: 5px;
     vertical-align: middle;
     animation: spin 3s linear infinite;
@@ -692,10 +696,10 @@ section .animate{
     padding: 20px;
     border-radius: 3rem;
     background-color: #468a83;
-    /* margin: 60px; */
+    margin: 60px;
     border: 2px solid #000;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
-    /* animation: fadeInDown 3s ease-in-out; */
+    animation: fadeInDown 3s ease-in-out;
 }
 #calc_form{
     background-color: #eee64a;
@@ -706,11 +710,14 @@ section .animate{
     align-items: center;
     width: 60%;
     font-size:20px;
+    font-weight: bold;
     text-align: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+
 }
 #loan_amount,#monthly_income,#loan_term{
     margin-bottom: 20px;
-    width: 200px;
+    width: 60%;
     height: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
