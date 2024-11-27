@@ -196,6 +196,8 @@ $(document).ready(function(){
     $('#calc_reset').click(function(event){
         $('#calc_form')[0].reset();
         $('#result_content').text("");
+        $(".calc_input").css('border', '2px solid #000000');
+        $(".calc_input").css('border-radius', '8px');
     })
 
     $('#m_calculate').click(function(event){
