@@ -102,7 +102,8 @@ $(document).ready(function(){
             result.text('Message submitted');
             messagebox.css('border','4px solid #00e431');
             subject_box.css('border','4px solid #00e431');
-            result.css('background-color','#00e431')
+            result.css('color','#88ff00')
+            result.css('font-weight','bolder')
             $('#bank_form')[0].reset();//selecttor selects the form and reset the whole thing.found on geeksforgeeks
             setTimeout(function(){
                 result.text('');
@@ -194,7 +195,7 @@ $(document).ready(function(){
     //reset calc
     $('#calc_reset').click(function(event){
         $('#calc_form')[0].reset();
-        $()
+        $('#result_content').text("");
     })
 
     $('#m_calculate').click(function(event){
@@ -241,12 +242,10 @@ $(document).ready(function(){
             $("#result_content").css('color','black');
             if(monthy_repayment>threshold){
                 $("#result_content").text("Loan Denied: Monthly income exceeds 30% of your income");
-                // $('#calc_form')[0].reset();
-                $("#result_content").css('background-color','#ff0e0e');
+                $("#result_content").css('color','#ff0e0e');
 
             }
             else{
-                // $('#calc_form')[0].reset();
                 $("#result_content").html("Loan approved <br>Monthly Payment = "+ monthy_repayment.toFixed(2)+"<br>Total Payment = " +total_payment.toFixed(2)+"<br>Total interest = "+total_interest.toFixed(2)+"<br>Income Left = "+income_left.toFixed(2));
                 $("#result_content").css('color','#00e431')
             }

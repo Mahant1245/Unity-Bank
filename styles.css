@@ -557,7 +557,7 @@ section .animate{
     border-radius: 5px;
 }
 #bank_form{
-    background-color: #e1bbe3;
+    background-color: #be7ac1;
     padding: 20px;
     border-radius: 2rem;
     width: 300px;
@@ -591,7 +591,6 @@ section .animate{
     border-radius: 5px;
     width: 320px;
     height: 526.67px;
-    /* text-align: justify; */
     font-size: 24px;
 }
 .c_btn{
@@ -634,14 +633,14 @@ section .animate{
     background: #99999a;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    width: 170px;
+    width: 175px;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
     cursor: pointer;
-    animation: fadeInUp 3s ease-in-out;
+    animation: fadeInUp 2s ease-in-out;
 }
 
 .year:hover{
@@ -653,7 +652,7 @@ section .animate{
     margin: 10px;
     background-color: #0056b3;
     border-radius: 1rem;
-    animation: fadeInDown 3s ease-in-out;
+    animation: fadeInDown 2s ease-in-out;
 
     
 }
@@ -725,4 +724,8 @@ section .animate{
     width: 60%;
     height: 40px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.txt{
+    color: #88ff00;
+    font-weight:bolder;
 }
