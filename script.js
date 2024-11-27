@@ -71,6 +71,11 @@ $(document).ready(function(){
     $('#resetBtn').click(function(event){
         event.preventDefault();
         $('#bank_form')[0].reset();
+        $('#result').text('')
+        $('#subject').css('border','2px solid #000000');
+        $('#subject').css('border-radius', '8px');
+        $('#message').css('border','2px solid #000000');
+        $('#message').css('border-radius', '8px');
     })
 
     //script for submit
